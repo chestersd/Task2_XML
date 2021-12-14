@@ -1,1 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="gems.xsl"?>
+<Gems>
+    <gem>
+        <id>0</id>
+        <name origin="SAR">brilliant</name>
+        <preciousness>precious</preciousness>
+        <visualParameters>
+            <color>white</color>
+            <opacity>98</opacity>
+            <facets>15</facets>
+            <weight>16</weight>
+        </visualParameters>
+    </gem>
+</Gems>
