@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gems xmlns:xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://www.epam.com/gems"
+      xsi:schemaLocation="http://www.example.com/gems gems.xsd">
+
+    <gem>
+        <id>0</id>
+        <name origin="SAR">brilliant</name>
+        <preciousness>precious</preciousness>
+        <visualParameters>
+            <color>white</color>
+            <opacity>98</opacity>
+            <facets>15</facets>
+            <weight>16</weight>
+        </visualParameters>
+    </gem>
+    <gem>
+        <id>1</id>
+        <name origin="Russia">emerald</name>
+        <preciousness>precious</preciousness>
+        <visualParameters>
+            <color>green</color>
+            <opacity>42</opacity>
+            <facets>12</facets>
+            <weight>3</weight>
+        </visualParameters>
+    </gem>
+    <gem>
+    <id>2</id>
+    <name origin="SAR">topaz</name>
+    <preciousness>precious</preciousness>
+    <visualParameters>
+        <color>yellow</color>
+        <opacity>76</opacity>
+        <facets>14</facets>
+        <weight>24</weight>
+    </visualParameters>
+    </gem>
+    <gem>
+        <id>3</id>
+        <name factory="Nephrite manufacture">nephritis</name>
+        <preciousness>semiPrecious</preciousness>
+        <visualParameters>
+            <color>black</color>
+            <opacity>1</opacity>
+            <facets>7</facets>
+            <weight>14</weight>
+        </visualParameters>
+    </gem>
+</gems>

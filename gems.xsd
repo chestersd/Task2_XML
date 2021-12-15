@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://epam.com/gems"
+        xmlns:tns="http://epam.com/gems"
+        elementFormDefault="qualified">
+
+    <element name="gems">
+        <complexType>
+            <sequence>
+                <element ref="tns:gem"
+                         minOccurs="2"
+                         maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="Gem">
+        <sequence>
+            <element name="id" type="positiveInteger"/>
+            <element name="name" type="string"/>
+            <element name="preciousness" type="tns:Preciousness"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="Preciousness">
+        <sequence>
+            <enumeration value="precious"></enumeration>
+            <enumeration value="semiPrecious"></enumeration>
+        </sequence>
+    </complexType>
+
+    <complexType name="VisualParameters">
+        <sequence>
+            <element name="color" type="string"/>
+            <element name="opacity" type="string"/>
+            <element name="facets" type="positiveInteger"
+                                    minOccurs="4"
+                                    maxOccurs="15"/>
+            <element name="weight" type="double"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="Synthesized">
+        <sequence
+    </complexType>
+
+
+
+
