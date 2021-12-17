@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<gems xmlns:xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<gems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xmlns="http://www.epam.com/gems"
       xsi:schemaLocation="http://www.example.com/gems gems.xsd">
 
@@ -7,6 +7,7 @@
         <id>0</id>
         <name origin="SAR">brilliant</name>
         <preciousness>precious</preciousness>
+        <natural>natural</natural>
         <visualParameters>
             <color>white</color>
             <opacity>98</opacity>
@@ -18,6 +19,7 @@
         <id>1</id>
         <name origin="Russia">emerald</name>
         <preciousness>precious</preciousness>
+        <natural>natural</natural>
         <visualParameters>
             <color>green</color>
             <opacity>42</opacity>
@@ -26,25 +28,38 @@
         </visualParameters>
     </gem>
     <gem>
-    <id>2</id>
-    <name origin="SAR">topaz</name>
-    <preciousness>precious</preciousness>
-    <visualParameters>
-        <color>yellow</color>
-        <opacity>76</opacity>
-        <facets>14</facets>
-        <weight>24</weight>
-    </visualParameters>
+        <id>2</id>
+        <name origin="SAR">topaz</name>
+        <preciousness>precious</preciousness>
+        <visualParameters>
+            <color>yellow</color>
+            <opacity>76</opacity>
+            <facets>14</facets>
+            <weight>24</weight>
+        </visualParameters>
     </gem>
     <gem>
         <id>3</id>
         <name factory="Nephrite manufacture">nephritis</name>
         <preciousness>semiPrecious</preciousness>
+        <synthesized>synthesized</synthesized>
         <visualParameters>
             <color>black</color>
             <opacity>1</opacity>
             <facets>7</facets>
             <weight>14</weight>
+        </visualParameters>
+    </gem>
+    <gem>
+        <id>4</id>
+        <name factory="Russkiye Samotsvety">cubic zirconia</name>
+        <preciousness>semiPrecious</preciousness>
+        <synthesized>synthesized</synthesized>
+        <visualParameters>
+            <color>white</color>
+            <opacity>98</opacity>
+            <facets>10</facets>
+            <weight>5</weight>
         </visualParameters>
     </gem>
 </gems>

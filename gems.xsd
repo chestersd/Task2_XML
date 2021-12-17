@@ -7,27 +7,28 @@
     <element name="gems">
         <complexType>
             <sequence>
-                <element ref="tns:gem"
-                         minOccurs="2"
-                         maxOccurs="unbounded"/>
+                 <element ref="tns:gem"
+                          minOccurs="2"
+                          maxOccurs="unbounded"/>
             </sequence>
         </complexType>
     </element>
 
-    <complexType name="Gem">
+    <complexType name="gem">
         <sequence>
             <element name="id" type="positiveInteger"/>
             <element name="name" type="string"/>
             <element name="preciousness" type="tns:Preciousness"/>
         </sequence>
+        <attribute name="preciousness" type="tns:Preciousness" use="optional"/>
     </complexType>
 
-    <complexType name="Preciousness">
-        <sequence>
-            <enumeration value="precious"></enumeration>
-            <enumeration value="semiPrecious"></enumeration>
-        </sequence>
-    </complexType>
+    <simpleType  name="Preciousness">
+        <restriction base="string">
+            <enumeration value="precious"/>
+            <enumeration value="semiPrecious"/>
+        </restriction>
+    </simpleType >
 
     <complexType name="VisualParameters">
         <sequence>
@@ -41,9 +42,21 @@
     </complexType>
 
     <complexType name="Synthesized">
-        <sequence
+        <complexContent>
+            <extension base="tns:Synthesized"/>
+        </complexContent>
     </complexType>
 
+    <complexType name="Natural">
+        <complexContent>
+            <extension base="tns:Natural"/>
+        </complexContent>
+    </complexType>
 
+<!--    <attribute name="synthesized" type="string" use="optional"/>-->
+<!--    <attribute name="natural" type="string" use="optional"/>-->
 
-
+    <element name="gem" type="tns:gem" abstract="true"/>
+    <element name="Synthesized" type="tns:Synthesized" substitutionGroup="tns:gem"/>
+    <element name="Natural" type="tns:Natural" substitutionGroup="tns:gem"/>
+</schema>
