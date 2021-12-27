@@ -40,7 +40,7 @@
     </gem>
     <gem>
         <id>3</id>
-        <name origin="Nephrite manufacture">nephritis</name>
+        <name factory="Nephrite manufacture">nephritis</name>
         <preciousness>semiPrecious</preciousness>
         <synthesized>synthesized</synthesized>
         <visualParameters>
@@ -52,7 +52,7 @@
     </gem>
     <gem>
         <id>4</id>
-        <name origin="Russkiye Samotsvety">cubic zirconia</name>
+        <name factory="Russkiye Samotsvety">cubic zirconia</name>
         <preciousness>semiPrecious</preciousness>
         <synthesized>synthesized</synthesized>
         <visualParameters>

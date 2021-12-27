@@ -53,9 +53,6 @@
         </complexContent>
     </complexType>
 
-<!--    <attribute name="synthesized" type="string" use="optional"/>-->
-<!--    <attribute name="natural" type="string" use="optional"/>-->
-
     <element name="gem" type="tns:gem" abstract="true"/>
     <element name="Synthesized" type="tns:Synthesized" substitutionGroup="tns:gem"/>
     <element name="Natural" type="tns:Natural" substitutionGroup="tns:gem"/>
