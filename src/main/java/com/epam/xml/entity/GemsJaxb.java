@@ -1,26 +1,31 @@
 package com.epam.xml.entity;
 
-import java.util.List;
+import javax.xml.bind.annotation.*;
 
+@XmlRootElement(name = "Gem")
 
-public class Gem {
-    private Integer id;
+@XmlType(propOrder = {"origin", "name", "preciousness", "synthesized"})
+public class GemsJaxb {
+    private int id;
     private String origin;
     private String name;
     private String preciousness;
     private String synthesized;
-    private VisualParameters visualParameters;
-    
-    private List<Gem> gem(){
-        List<Gem> gem = null;
-        return gem;
+
+    public GemsJaxb(int id, String origin, String name, String preciousness, String synthesized) {
+        this.id = id;
+        this.origin = origin;
+        this.name = name;
+        this.preciousness = preciousness;
+        this.synthesized = synthesized;
     }
 
-    public Integer getId() {
+    @XmlAttribute
+    public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -56,25 +61,14 @@ public class Gem {
         this.synthesized = synthesized;
     }
 
-    public VisualParameters getVisualParameters() {
-        return visualParameters();
-    }
-
     @Override
     public String toString() {
-        return "Gem{" +
+        return "GemsJaxb{" +
                 "id=" + id +
                 ", origin='" + origin + '\'' +
                 ", name='" + name + '\'' +
                 ", preciousness='" + preciousness + '\'' +
                 ", synthesized='" + synthesized + '\'' +
-                ", visualParameters=" + visualParameters +
                 '}';
     }
-
-    private VisualParameters visualParameters() {
-        return visualParameters();
-    }
-
-
 }
