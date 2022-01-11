@@ -9,6 +9,8 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import com.epam.xml.entity.Gem;
 import com.epam.xml.entity.VisualParameters;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -16,6 +18,8 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 public class Dom {
+    private static final Logger LOGGER = LogManager.getLogger();
+
     private Set<Gem> gems;
     private DocumentBuilder documentBuilder;
     public void GemsDomBuilder() {

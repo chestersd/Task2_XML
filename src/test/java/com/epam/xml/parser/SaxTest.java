@@ -2,17 +2,11 @@ package com.epam.xml.parser;
 
 import com.epam.xml.entity.Gem;
 import com.epam.xml.exception.ParserCustomException;
-import com.sun.org.apache.xml.internal.resolver.readers.SAXParserHandler;
 import org.junit.Assert;
 import org.junit.Test;
-import org.xml.sax.SAXException;
 
 import javax.xml.bind.JAXBException;
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
