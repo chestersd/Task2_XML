@@ -1,0 +1,13 @@
+<gems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://www.epam.com/gems"
+      xsi:schemaLocation="http://www.example.com/gems gems.xsd">
+
+    <gem>
+        <id>22</id>
+        <origin>Russia</origin>
+        <name>Brilliant</name>
+        <preciousness>precious</preciousness>
+        <synthesized>synthesized</synthesized>
+    </gem>
+
+</gems>

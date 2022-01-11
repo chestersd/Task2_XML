@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://epam.com/gems"
+        xmlns:tns="http://epam.com/gems"
+        elementFormDefault="qualified">
+
+    <element name="gems">
+        <complexType>
+            <sequence>
+                 <element ref="tns:gem"
+                          minOccurs="2"
+                          maxOccurs="unbounded"/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="gem">
+        <sequence>
+            <element name="id" type="positiveInteger"/>
+            <element name="name" type="string"/>
+            <element name="preciousness" type="tns:Preciousness"/>
+        </sequence>
+        <attribute name="preciousness" type="tns:Preciousness" use="optional"/>
+    </complexType>
+
+    <simpleType  name="Preciousness">
+        <restriction base="string">
+            <enumeration value="precious"/>
+            <enumeration value="semiPrecious"/>
+        </restriction>
+    </simpleType >
+
+    <complexType name="VisualParameters">
+        <sequence>
+            <element name="color" type="string"/>
+            <element name="opacity" type="string"/>
+            <element name="facets" type="positiveInteger"
+                                    minOccurs="4"
+                                    maxOccurs="15"/>
+            <element name="weight" type="double"/>
+        </sequence>
+    </complexType>
+
+    <complexType name="Synthesized">
+        <complexContent>
+            <extension base="tns:Synthesized"/>
+        </complexContent>
+    </complexType>
+
+    <complexType name="Natural">
+        <complexContent>
+            <extension base="tns:Natural"/>
+        </complexContent>
+    </complexType>
+
+    <element name="gem" type="tns:gem" abstract="true"/>
+    <element name="Synthesized" type="tns:Synthesized" substitutionGroup="tns:gem"/>
+    <element name="Natural" type="tns:Natural" substitutionGroup="tns:gem"/>
+</schema>
