@@ -10,21 +10,19 @@ import java.io.File;
 
 public class JaxbUnmarshaller {
 
-    private String fileName = "gemsJaxb.xml";
-    public static GemsJaxb unmarshJaxb(){
-        GemsJaxb unmarshGem = fromXmlToObject(fileName);
-        if (unmarshJaxb != null) {
-            System.out.println(unmarshJaxb.toString());
+    private String filePath = "gemsJaxb.xml";
+
+        GemsJaxb unmarshGem = fromXmlToObject(filePath);
+        if (GemsJaxb != null) {
+            System.out.println(unmarshGem.toString());
         }
-    }
 
-    private static Student fromXmlToObject(String filePath) {
+    private static GemsJaxb fromXmlToObject(String filePath) {
         try {
-            // создаем объект JAXBContext - точку входа для JAXB
-            JAXBContext jaxbContext = JAXBContext.newInstance(Student.class);
-            Unmarshaller un = jaxbContext.createUnmarshaller();
+            JAXBContext jaxbContext = JAXBContext.newInstance(GemsJaxb.class);
+            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
 
-            return (Student) un.unmarshal(new File(filePath));
+            return (GemsJaxb) unmarshaller.unmarshal(new File(filePath));
         } catch (JAXBException e) {
             e.printStackTrace();
         }

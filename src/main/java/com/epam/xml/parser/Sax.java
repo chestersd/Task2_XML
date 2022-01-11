@@ -29,10 +29,8 @@ public class Sax {
             parser.parse(file, handler);
         } catch (SAXException e) {
             return null;
-            //            insert logger
         } catch (IOException e) {
             return null;
-            //            insert logger
         }
         return handler.getGem();
     }

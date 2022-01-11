@@ -10,6 +10,5 @@ public class Director {
         Sax parser = new Sax();
         Gem gem = parser.parse();
         System.out.println(gem.toString());
-
     }
 }

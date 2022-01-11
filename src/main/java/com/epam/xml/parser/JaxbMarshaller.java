@@ -28,7 +28,4 @@ public class JaxbMarshaller {
             e.printStackTrace();
         }
     }
-
-
-
 }

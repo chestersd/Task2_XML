@@ -10,7 +10,16 @@ public class Gem {
     private String preciousness;
     private String synthesized;
     private VisualParameters visualParameters;
-    
+
+    public Gem(Integer id, String origin, String name, String preciousness, String synthesized) {
+        this.id = id;
+        this.origin = origin;
+        this.name = name;
+        this.preciousness = preciousness;
+        this.synthesized = synthesized;
+
+    }
+
     private List<Gem> gem(){
         List<Gem> gem = null;
         return gem;
